@@ -11,6 +11,7 @@
     "@/*": ["./src/*"]
   },
     "target": "esnext",
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "lib": ["es2021", "dom"]
   }
 }

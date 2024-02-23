@@ -16,6 +16,7 @@
     "moduleResolution": "Node",
     "target": "esnext",
     "experimentalDecorators": true,
-    "types": ["node"]
+    "types": ["node"],
+    "lib": ["es2021", "dom"]
   }
 }
