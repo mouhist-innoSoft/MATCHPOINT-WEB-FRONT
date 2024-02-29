@@ -35,6 +35,7 @@ import ProgressSpinner from "primevue/progressspinner"
 import RadioButton from "primevue/radiobutton"
 import Textarea from 'primevue/textarea'
 import Tooltip from "primevue/tooltip"
+import ClassCard from './components/componentPadrao/GlassCard.vue'
 import ComponentConfigUtils from './components/configUtil/ComponentConfigUtil'
 import { BR } from './components/configUtil/locale'
 
@@ -65,7 +66,9 @@ app.component("p-autocomplete", AutoComplete);
 app.component("p-checkbox", Checkbox);
 app.component("p-card", Card);
 
+//Componentes Padrões
 
+app.component("padrao-card", ClassCard);
 
 
 
