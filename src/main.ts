@@ -1,6 +1,5 @@
 import './assets/main.css'
 
-import { createPinia } from 'pinia'
 import { createApp } from 'vue'
 
 import App from './App.vue'
@@ -74,7 +73,7 @@ app.component("padrao-card", ClassCard);
 
 app.directive("tooltip", Tooltip)
 app.config.globalProperties.$setCursorPositionToStart = ComponentConfigUtils.setCursorPositionToStart;
-app.use(createPinia())
+// app.use(createPinia())
 app.use(router)
 app.use(PrimeVue, {
     locale: BR,

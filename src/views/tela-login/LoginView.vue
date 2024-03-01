@@ -1,35 +1,35 @@
 <template>
   <div class="login-container">
-      <h1>Login</h1>
-      <div class="p-fluid">
-        <div class="p-field">
-          <label for="username">Username</label>
-          <p-inputtext v-model="form.email.value" id="username" />
-        </div>
-        <div class="p-field">
-          <label for="password">Password</label>
-          <p-password v-model="form.senha.value" id="password" />
-        </div>
+    <h1>Login</h1>
+    <div class="p-fluid">
+      <div class="p-field">
+        <label for="username">Username</label>
+        <p-inputtext v-model="form.email.value" />
       </div>
-      <p-button label="Login" @click="login" />
+      <div class="p-field">
+        <label for="password">Password</label>
+        <p-password v-model="form.senha.value" />
+      </div>
+    </div>
+    <p-button label="Login" @click="login()" />
   </div>
 </template>
 
 <script lang="ts">
-import { FormLogin as Formulario} from "./FormLogin"
-import { Vue } from 'vue-class-component';
+import { FormLogin as Formulario } from './FormLogin'
+import { Vue } from 'vue-class-component'
 
 export default class LoginView extends Vue {
-
-  public form = new Formulario();
+  public form = new Formulario()
 
   login() {
-    if(!this.form.valid()) {
-      if(!this.form.email.valid) console.log("CAMPO EMAIL É OBRIGATÓRIO");
-      if(!this.form.senha.valid) console.log("CAMPO SENHA É OBRIGATÓRIO");
+    if (!this.form.valid()) {
+      if (!this.form.email.valid) console.log('CAMPO EMAIL É OBRIGATÓRIO')
+      if (!this.form.senha.valid) console.log('CAMPO SENHA É OBRIGATÓRIO')
+      return
     }
-    console.log('Username:', this.form.email.value);
-    console.log('Password:', this.form.senha.value);
+    console.log('Username:', this.form.email.value)
+    console.log('Password:', this.form.senha.value)
   }
 }
 </script>
