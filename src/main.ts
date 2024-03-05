@@ -1,9 +1,10 @@
 import './assets/main.css'
 
-import { createPinia } from 'pinia'
 import { createApp } from 'vue'
-
 import App from './App.vue'
+
+const app = createApp(App)
+
 import router from './router'
 
 import "primeflex/primeflex.css"
@@ -39,9 +40,6 @@ import ClassCard from './components/componentPadrao/GlassCard.vue'
 import ComponentConfigUtils from './components/configUtil/ComponentConfigUtil'
 import { BR } from './components/configUtil/locale'
 
-
-const app = createApp(App)
-
 //PrimeVue
 app.component("p-button", Button);
 app.component("p-paginator", Paginator);
@@ -74,7 +72,7 @@ app.component("padrao-card", ClassCard);
 
 app.directive("tooltip", Tooltip)
 app.config.globalProperties.$setCursorPositionToStart = ComponentConfigUtils.setCursorPositionToStart;
-app.use(createPinia())
+// app.use(createPinia())
 app.use(router)
 app.use(PrimeVue, {
     locale: BR,
