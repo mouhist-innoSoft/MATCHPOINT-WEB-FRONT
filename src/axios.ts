@@ -1,8 +1,7 @@
-import type { AxiosInstance } from 'axios';
-import axios from 'axios';
+import axios, { AxiosInstance } from 'axios';
 
 export const httpFront: AxiosInstance = axios.create({
-  baseURL: process.env.VUE_APP_ROOT_MATCHPOINT_WEB_FRONT,
+  baseURL: process.env.VUE_APP_ROOT_MATCHPOINT_API,
 });
 
 export class AxiosFrontAPI {

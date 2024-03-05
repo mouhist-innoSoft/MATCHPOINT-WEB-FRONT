@@ -1,8 +1,10 @@
 import './assets/main.css'
 
 import { createApp } from 'vue'
-
 import App from './App.vue'
+
+const app = createApp(App)
+
 import router from './router'
 
 import "primeflex/primeflex.css"
@@ -37,9 +39,6 @@ import Tooltip from "primevue/tooltip"
 import ClassCard from './components/componentPadrao/GlassCard.vue'
 import ComponentConfigUtils from './components/configUtil/ComponentConfigUtil'
 import { BR } from './components/configUtil/locale'
-
-
-const app = createApp(App)
 
 //PrimeVue
 app.component("p-button", Button);

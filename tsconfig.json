@@ -4,7 +4,7 @@
     "module": "esnext",
     "strict": true,
     "jsx": "preserve",
-    "types": ["accepts"],
+    "types": ["accepts","node"],
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "skipLibCheck": true,

@@ -42,7 +42,6 @@ export default class CdastroUsuarioView extends Vue {
   router = useRouter();
 
   cadastrar() {
-    console.log("entrou no cadastrar");
     
     if (!this.form.valid()) {
       if (!this.form.nome.valid) console.log('CAMPO NOME É OBRIGATÓRIO');
@@ -52,13 +51,9 @@ export default class CdastroUsuarioView extends Vue {
       if (!this.form.senha.valid) console.log('CAMPO SENHA É OBRIGATÓRIO');
       return
     }
-
-    console.log("Validou");
     
     UsuarioService.incluir(this.form.values())
     .then(() => {
-      console.log("requisitou");
-      
       this.$router.push("/")
     }).catch((error) => {
       console.log(error);
