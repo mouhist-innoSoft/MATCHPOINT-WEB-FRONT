@@ -6,5 +6,5 @@
 </template>
 
 <style scoped>
-
+@import "style.scss";
 </style>

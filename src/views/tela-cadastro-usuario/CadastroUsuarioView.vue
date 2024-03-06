@@ -36,6 +36,7 @@ import { FormCadastroUsuario as Formulario } from './FormCadastroUsuario';
 import { Vue } from 'vue-class-component';
 import UsuarioService from '@/services/Usuario.service';
 import { useRouter } from 'vue-router';
+import { alertaErro, alertaSucesso } from '@/components/alert/AlertComponent';
 
 export default class CdastroUsuarioView extends Vue {
   public form = new Formulario()
@@ -54,9 +55,11 @@ export default class CdastroUsuarioView extends Vue {
     
     UsuarioService.incluir(this.form.values())
     .then(() => {
-      this.$router.push("/")
+      alertaSucesso("Cadastrado com sucesso").then(() => {
+        this.$router.push("/")
+      })
     }).catch((error) => {
-      console.log(error);
+      alertaErro("Atenção!", error);
     })
   }
 }
