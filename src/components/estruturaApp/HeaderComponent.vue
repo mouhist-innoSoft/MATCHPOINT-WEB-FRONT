@@ -1,9 +1,12 @@
 <template>
-  <div>
-    <header v-if="isAuthenticated">
+  <p-megaMenu>
+    <template #start>
       <h1>Meu App</h1>
-    </header>
-  </div>
+    </template>
+    <template #end>
+      <p-avatar label="P" class="mr-2" size="large" shape="circle" />
+    </template>
+  </p-megaMenu>
 </template>
 
   
@@ -12,7 +15,6 @@ import { Vue } from 'vue-class-component'
 
 export default class HeaderComponent extends Vue {
   isAuthenticated: boolean = true
-
 }
 </script>
   

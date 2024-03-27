@@ -14,6 +14,7 @@ import "primevue/resources/primevue.min.css"
 import "primevue/resources/themes/saga-blue/theme.css"
 
 import AutoComplete from 'primevue/autocomplete'
+import Avatar from 'primevue/avatar'
 import Button from "primevue/button"
 import Calendar from "primevue/calendar"
 import Card from 'primevue/card'
@@ -28,6 +29,7 @@ import InlineMessage from "primevue/inlinemessage"
 import InputMask from "primevue/inputmask"
 import InputNumber from "primevue/inputnumber"
 import InputText from "primevue/inputtext"
+import MegaMenu from 'primevue/megamenu'
 import Menubar from "primevue/menubar"
 import Paginator from 'primevue/paginator'
 import Panel from "primevue/panel"
@@ -68,6 +70,8 @@ app.component("p-calendar", Calendar);
 app.component("p-autocomplete", AutoComplete);
 app.component("p-checkbox", Checkbox);
 app.component("p-card", Card);
+app.component("p-avatar", Avatar);
+app.component("p-megaMenu", MegaMenu);
 
 //Componentes Padrões
 

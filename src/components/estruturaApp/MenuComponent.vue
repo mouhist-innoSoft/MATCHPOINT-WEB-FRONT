@@ -88,12 +88,6 @@ export default class MenuComponent extends Vue {
 </script>
     
   <style lang="scss">
-header {
-  background-color: #333;
-  color: white;
-  padding: 5px;
-}
-
 .card {
   width: 60%;
   max-width: 200px;
@@ -102,7 +96,19 @@ header {
 }
 
 .menu {
-  background-color: #33333342;
+  background-color: #ffffff00;
   height: 100%;
+}
+
+.menu .p-menuitem-text {
+  display: none;
+}
+
+.menu .p-menuitem {
+  position: relative;
+}
+
+.menu .p-menuitem:hover .p-menuitem-text {
+  display: block;
 }
 </style>
