@@ -1,7 +1,9 @@
 <template>
   <div class="login-container">
     <padrao-card class="card">
-      <h1 class="login-title">Login</h1>
+      <h1 class="login-title">
+        Login
+      </h1>
       <div class="p-fluid">
         <div class="p-field">
           <label for="username">Username</label>
@@ -9,12 +11,13 @@
         </div>
         <div class="p-field">
           <label for="password">Password</label>
-          <p-password v-model="form.senha.value" id="password" />
+          <p-password v-model="form.senha.value" id="password" toggleMask :feedback="false"/>
         </div>
       </div>
       <div class="button-container">
         <p-button label="Login" @click="login" class="login-button" />
       </div>
+      <a href="/cadastrar-usuario">Não possui cadastro? Clique Aqui!</a>
     </padrao-card>
   </div>
 </template>
@@ -56,6 +59,14 @@ export default class LoginView extends Vue {
 
 }
 
+a {
+    color: #141d53;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
 .login-title {
   margin-bottom: 20px; 
   text-align: center;
@@ -74,6 +85,7 @@ export default class LoginView extends Vue {
 .login-button {
   background-color: #141d53;
   border: none;
+  border-radius: 10%;
   color: white;
   padding: 15px 32px;
   text-align: center;
