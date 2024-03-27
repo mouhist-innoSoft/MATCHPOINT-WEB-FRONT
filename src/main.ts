@@ -35,15 +35,20 @@ import Password from "primevue/password"
 import ProgressSpinner from "primevue/progressspinner"
 import RadioButton from "primevue/radiobutton"
 import Textarea from 'primevue/textarea'
+import TieredMenu from 'primevue/tieredmenu'
 import Tooltip from "primevue/tooltip"
 import ClassCard from './components/componentPadrao/GlassCard.vue'
 import ComponentConfigUtils from './components/configUtil/ComponentConfigUtil'
 import { BR } from './components/configUtil/locale'
+import HeaderComponent from './components/estruturaApp/HeaderComponent.vue'
+import MenuComponent from './components/estruturaApp/MenuComponent.vue'
+
 
 //PrimeVue
 app.component("p-button", Button);
 app.component("p-paginator", Paginator);
 app.component("p-menuBar", Menubar);
+app.component("p-tieredmenu", TieredMenu);
 app.component("p-panel", Panel);
 app.component("p-inputtext", InputText);
 app.component("p-textarea", Textarea);
@@ -67,6 +72,8 @@ app.component("p-card", Card);
 //Componentes Padrões
 
 app.component("padrao-card", ClassCard);
+app.component("header-component", HeaderComponent)
+app.component("menu-component", MenuComponent)
 
 
 

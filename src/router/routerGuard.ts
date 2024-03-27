@@ -4,6 +4,7 @@ import type { NavigationGuardNext } from "vue-router";
 const rotasPublicas = [
   "/",
   "/cadastrar-usuario",
+  "/meu-perfil"
 ];
 
 const getRole = () => {
