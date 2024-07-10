@@ -1,9 +1,10 @@
 import './assets/main.css'
 
-import { createPinia } from 'pinia'
 import { createApp } from 'vue'
-
 import App from './App.vue'
+
+const app = createApp(App)
+
 import router from './router'
 
 import "primeflex/primeflex.css"
@@ -13,6 +14,7 @@ import "primevue/resources/primevue.min.css"
 import "primevue/resources/themes/saga-blue/theme.css"
 
 import AutoComplete from 'primevue/autocomplete'
+import Avatar from 'primevue/avatar'
 import Button from "primevue/button"
 import Calendar from "primevue/calendar"
 import Card from 'primevue/card'
@@ -27,6 +29,7 @@ import InlineMessage from "primevue/inlinemessage"
 import InputMask from "primevue/inputmask"
 import InputNumber from "primevue/inputnumber"
 import InputText from "primevue/inputtext"
+import MegaMenu from 'primevue/megamenu'
 import Menubar from "primevue/menubar"
 import Paginator from 'primevue/paginator'
 import Panel from "primevue/panel"
@@ -34,17 +37,20 @@ import Password from "primevue/password"
 import ProgressSpinner from "primevue/progressspinner"
 import RadioButton from "primevue/radiobutton"
 import Textarea from 'primevue/textarea'
+import TieredMenu from 'primevue/tieredmenu'
 import Tooltip from "primevue/tooltip"
+import ClassCard from './components/componentPadrao/GlassCard.vue'
 import ComponentConfigUtils from './components/configUtil/ComponentConfigUtil'
 import { BR } from './components/configUtil/locale'
+import HeaderComponent from './components/estruturaApp/HeaderComponent.vue'
+import MenuComponent from './components/estruturaApp/MenuComponent.vue'
 
-
-const app = createApp(App)
 
 //PrimeVue
 app.component("p-button", Button);
 app.component("p-paginator", Paginator);
 app.component("p-menuBar", Menubar);
+app.component("p-tieredmenu", TieredMenu);
 app.component("p-panel", Panel);
 app.component("p-inputtext", InputText);
 app.component("p-textarea", Textarea);
@@ -64,14 +70,20 @@ app.component("p-calendar", Calendar);
 app.component("p-autocomplete", AutoComplete);
 app.component("p-checkbox", Checkbox);
 app.component("p-card", Card);
+app.component("p-avatar", Avatar);
+app.component("p-megaMenu", MegaMenu);
 
+//Componentes Padrões
 
+app.component("padrao-card", ClassCard);
+app.component("header-component", HeaderComponent)
+app.component("menu-component", MenuComponent)
 
 
 
 app.directive("tooltip", Tooltip)
 app.config.globalProperties.$setCursorPositionToStart = ComponentConfigUtils.setCursorPositionToStart;
-app.use(createPinia())
+// app.use(createPinia())
 app.use(router)
 app.use(PrimeVue, {
     locale: BR,
