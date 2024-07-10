@@ -1,0 +1,52 @@
+.custom-swal-container-class {
+  z-index: 9999999999 !important;
+}
+
+.custom-swal-popup-class {
+  /* Estilos para o popup */
+  background-color: #008000; /* Verde escuro */
+  border: 2px solid #fcdc58; /* Amarelo */
+}
+
+.custom-swal-header-class {
+  /* Estilos para o cabeçalho */
+  color: #ffffff; /* Branco */
+}
+
+.custom-swal-title-class {
+  /* Estilos para o título */
+  font-size: 24px; /* Tamanho da fonte */
+}
+
+.custom-swal-close-button-class {
+  /* Estilos para o botão de fechar */
+  color: #ffffff; /* Branco */
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-size: cover;
+}
+
+.header-component {
+  height: 50px; 
+  background-color: #333; 
+}
+
+.main-container {
+  display: flex;
+  flex: 1;
+}
+
+.menu-component {
+  width: 200px; 
+  background-color: #555; 
+}
+
+.content {
+  flex: 1; 
+  overflow-y: auto; 
+}
+
